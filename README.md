@@ -18,7 +18,6 @@ The concept of this assignment is to create a Spring Boot API project that will 
 * You will need to include at minimum the dependencies
     * Web
 	* DevTools
-* Add the [MapStruct Dependency](http://mapstruct.org/documentation/installation/) to the pom.xml
 * Add the SpringFox and SpringFox-UI dependecies to the pom.xml
 * Add the Docket bean to the Configuration class
 * Create a POJO named *"Person"* with at least the fields
@@ -26,20 +25,18 @@ The concept of this assignment is to create a Spring Boot API project that will 
 	* First Name - `String`
 	* Last Name - `String`
 	* Friends - `List<Person>`
-* Create a *"PersonDto"* that replaces the `List<Person>` with a `List<Long>` that will contain IDs 
-* Create the Mapper for Person
+* Create a *"PersonDto"* that removes the Friends field
+* Create a *PersonService* and inject it into the *PersonController*. 
 * Create a Controller named *"PersonController"* that controls the *"/person"* url
-* Implement the following endpoints
+* Create the following endpoints in the *PersonController*, and implement their behavior in the *PersonService*
   1. `GET /person`
     * This will retrieve a list of all PersonDtos
   2. `GET /person/{id}`
     * This will retrieve a single PersonDto as indicated by the {id}, or return the 404 - Not Found status code if that ID does not exist
   3. `POST /person`
-    * This will accept JSON in the form of a PersonDto, create a Person instance, assign an ID to that Person, and store the Person instance. It will then return a 201 - Created status code. Return the 404 - Not Found status code if that ID does not exist
+    * This will accept JSON in the form of a PersonDto, create a Person instance, assign an ID to that Person, and store the Person instance in a collection in the *PersonService*. It will then return a 201 - Created status code. Return the 404 - Not Found status code if that ID does not exist
   4. `PUT /person/{id}`
     * This will overwrite the Person with the indicated {id} with the unmarshalled JSON contents of the body of this request or return the 404 - Not Found status code if that ID does not exist
   5. `DELETE /person/{id}`
     * This will delete the Person with the ID specified and remove all references to the specified ID in the Friends list of all other Person objects. Return the 404 - Not Found status code if that ID does not exist
-* Create a *PersonService* and inject it into the *PersonController*. Implement methods to support the API.
-* Ensure an error will be thrown and that an appropriate error message is returned to the user if in the Friends property of a JSON message body a user attempts to add reference the ID of a Person that does not exist
 * Test the API using `localhost:8080/swagger-ui.html`
