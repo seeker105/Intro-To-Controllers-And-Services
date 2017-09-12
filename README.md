@@ -1,7 +1,7 @@
 # Intro To Controllers And Services
 
 #### Description
-In this assignment you will practice newly acquired knowledge of Spring to create a basic Controller and a supporting Service from the ground up. You will interact with the endpoints of the Controller through an HTML page that is generated based on the Swagger documentation of those endpoints.
+In this assignment you will practice newly acquired knowledge of Spring to create a basic Controller and a supporting Service from the ground up.
 
 #### Duration
 2-3 hours
@@ -18,8 +18,6 @@ The concept of this assignment is to create a Spring Boot API project that will 
 * You will need to include at minimum the dependencies
     * Web
 	* DevTools
-* Add the SpringFox and SpringFox-UI dependecies to the pom.xml
-* Add the Docket bean to the Configuration class
 * Create a POJO named *"Person"* with at least the fields
     * ID - `Long`
 	* First Name - `String`
