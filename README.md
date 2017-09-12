@@ -39,4 +39,3 @@ The concept of this assignment is to create a Spring Boot API project that will 
     * This will overwrite the Person with the indicated {id} with the unmarshalled JSON contents of the body of this request or return the 404 - Not Found status code if that ID does not exist
   5. `DELETE /person/{id}`
     * This will delete the Person with the ID specified and remove all references to the specified ID in the Friends list of all other Person objects. Return the 404 - Not Found status code if that ID does not exist
-* Test the API using `localhost:8080/swagger-ui.html`
