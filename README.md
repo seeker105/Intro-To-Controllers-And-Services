@@ -24,8 +24,6 @@ The concept of this assignment is to create a Spring Boot API project that will 
     * ID - `Long`
 	* First Name - `String`
 	* Last Name - `String`
-	* Friends - `List<Person>`
-* Create a *"PersonDto"* that removes the Friends field
 * Create a *PersonService* and inject it into the *PersonController*. 
 * Create a Controller named *"PersonController"* that controls the *"/person"* url
 * Create the following endpoints in the *PersonController*, and implement their behavior in the *PersonService*
