@@ -21,7 +21,7 @@ public class PersonService {
 		this.personMapper = personMapper;
 		index = (long) 0;
 		this.persons = new HashMap<Long, Person>();
-		setupTestData();
+//		setupTestData();
 	}
 	
 	private void setupTestData(){
