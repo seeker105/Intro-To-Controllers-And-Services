@@ -27,8 +27,6 @@ public class PersonController {
 	
 	@GetMapping
 	public Set<PersonDto> getPersons(){
-		System.out.println("getPersons called");
-		System.out.println(service.toString());
 		return service.getPersons();		
 	}
 	
@@ -41,9 +39,6 @@ public class PersonController {
 		} else {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 		}
-		
-		System.out.println("getPerson called");
-		System.out.println(service.toString());
 		return found;
 	}
 	
@@ -56,8 +51,6 @@ public class PersonController {
 		} else {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 		}
-		System.out.println("createPerson called");
-		System.out.println(service.toString());
 		return newPerson;
 	}
 	
@@ -68,8 +61,6 @@ public class PersonController {
 			return personDto;
 		} 
 		response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-		System.out.println("replacePerson called");
-		System.out.println(service.toString());
 		return null;
 	}
 	
@@ -79,8 +70,6 @@ public class PersonController {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 			return null;
 		}
-		System.out.println("replacePerson called");
-		System.out.println(service.toString());
 		return service.deletePerson(id);
 	}
 	
